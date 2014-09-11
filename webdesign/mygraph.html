@@ -1,0 +1,49 @@
+ <!DOCTYPE HTML>
+<html>
+    <head>
+ 
+ <style>
+        body1 {
+    background-color: ivory;
+    margin:0;
+    padding:0;
+}
+#canvas {
+    position:absolute;
+    border:1px solid red;
+    width:auto /*100%*/;
+    height:auto /*100%*/;
+}
+.draggable {
+    width:100px;
+    height:70px;
+    background:skyblue;
+    border:1px solid green;
+}
+.right {
+    margin-left:500px;
+    background:salmon;
+}
+#wrap2 {
+    margin-top:-355px;
+}
+    </style>
+    <script type="text/javascript" src="graph.js"></script>
+</head>
+<body>
+    <canvas id="canvas" width=150 height=150></canvas>
+<div>
+    <div id="0" class="draggable">0</div>
+    <div id="1" class="draggable">1</div>
+    <div id="2" class="draggable">2</div>
+    <div id="3" class="draggable">3</div>
+    <div id="4" class="draggable">4</div>
+</div>
+<div id="wrap2">
+    <div id="0r" class="draggable right">0</div>
+    <div id="1r" class="draggable right">1</div>
+    <div id="2r" class="draggable right">2</div>
+    <div id="3r" class="draggable right">3</div>
+    <div id="4r" class="draggable right">4</div>
+</div>
+</body>
