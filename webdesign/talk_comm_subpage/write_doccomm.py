@@ -69,7 +69,7 @@ for k1 in range(len(comm1)):
     html1.close()
     name=talk_speaker[commOrig1[k1]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
-    c1=c1+"""<tr><td><a href="file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm1"""+str(k1)+""".html" onclick="javascript:void window.open("'file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm1"""+str(k1)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
+    c1=c1+"""<tr><td><a href="../speaker_pages/comm1"""+str(k1)+""".html" onclick="javascript:void window.open("'../speaker_pages/comm1"""+str(k1)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
     c1=c1+comm1[k1]+", "+name+"</td></tr>"
 
 c1=c1+"</table><div class='clearing'></div></div></html>"
@@ -86,7 +86,7 @@ for k2 in range(len(comm2)):
     html2.close()
     name=talk_speaker[commOrig2[k2]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
-    c2=c2+"""<tr><td><a href="file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm2"""+str(k2)+""".html" onclick="javascript:void window.open("'file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm2"""+str(k2)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
+    c2=c2+"""<tr><td><a href="../speaker_pages/comm2"""+str(k2)+""".html" onclick="javascript:void window.open("'../speaker_pages/comm2"""+str(k2)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
     c2=c2+comm2[k2]+", "+name+"</td></tr>"
 
 c2=c2+"</table><div class='clearing'></div></div></html>"
@@ -103,7 +103,7 @@ for k3 in range(len(comm3)):
     html1.close()
     name=talk_speaker[commOrig3[k3]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
-    c3=c3+"""<tr><td><a href="file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm3"""+str(k3)+""".html" onclick="javascript:void window.open("'file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm3"""+str(k3)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
+    c3=c3+"""<tr><td><a href="../speaker_pages/comm3"""+str(k3)+""".html" onclick="javascript:void window.open("'../speaker_pages/comm3"""+str(k3)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
     c3=c3+comm3[k3]+", "+name+"</td></tr>"
 
 c3=c3+"</table><div class='clearing'></div></div></html>"
@@ -119,7 +119,7 @@ for k4 in range(len(comm4)):
     html1.close()
     name=talk_speaker[commOrig4[k4]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
-    c4=c4+"""<tr><td><a href="file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm4"""+str(k4)+""".html" onclick="javascript:void window.open("'file:///Users/yujialiu/Desktop/research/webdesign/speaker_pages/comm4"""+str(k4)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
+    c4=c4+"""<tr><td><a href="../speaker_pages/comm4"""+str(k4)+""".html" onclick="javascript:void window.open("'../speaker_pages/comm4"""+str(k4)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
     c4=c4+comm4[k4]+", "+name+"</td></tr>"
 
 c4=c4+"</table><div class='clearing'></div></div></html>"
@@ -135,7 +135,7 @@ for k5 in range(len(comm5)):
     html1.close()
     name=talk_speaker[commOrig5[k5]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
-    c5=c5+"""<tr><td><a href="file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm5"""+str(k5)+""".html" onclick="javascript:void window.open("'file:///Users/yujialiu/Desktop/research/navigate-informs/webdesign/speaker_pages/comm5"""+str(k5)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
+    c5=c5+"""<tr><td><a href="../speaker_pages/comm5"""+str(k5)+""".html" onclick="javascript:void window.open("'../speaker_pages/comm5"""+str(k5)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""
     c5=c5+comm5[k5]+", "+name+"</td></tr>"
 
 c5=c5+"</table><div class='clearing'></div></div></html>"
