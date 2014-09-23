@@ -39,54 +39,54 @@ for key in doc_comm:
 for k in range(5):
     speaker=re.sub('"','',talk_speaker[comm1[k]])
     if talk_speaker1[comm1[k]] in user_comm:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm1[k]]])+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm1[k]]])+"</tr></td></table>"
     else:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
     name=talk_speaker1[comm1[k]]
-    html1=open('comm1'+str(k)+'.html',"a")
+    html1=open('../speaker_pages/comm1'+str(k)+'.html',"w")
     html1.write(c1)
     html1.close()
 
 for k in range(5):
     speaker=re.sub('"','',talk_speaker[comm2[k]])
     if talk_speaker1[comm2[k]] in user_comm:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm2[k]]])+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm2[k]]])+"</tr></td></table>"
     else:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
     name=talk_speaker1[comm2[k]]
-    html1=open('comm2'+str(k)+'.html',"a")
+    html1=open('../speaker_pages/comm2'+str(k)+'.html',"w")
     html1.write(c1)
     html1.close()
     
 for k in range(5):
     speaker=re.sub('"','',talk_speaker[comm3[k]])
     if talk_speaker1[comm3[k]] in user_comm:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm3[k]]])+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm3[k]]])+"</tr></td></table>"
     else:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
     name=talk_speaker1[comm3[k]]
-    html1=open('comm3'+str(k)+'.html',"a")
+    html1=open('../speaker_pages/comm3'+str(k)+'.html',"w")
     html1.write(c1)
     html1.close()
     
 for k in range(5):
     speaker=re.sub('"','',talk_speaker[comm4[k]])
     if talk_speaker1[comm4[k]] in user_comm:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm4[k]]])+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm4[k]]])+"</tr></td></table>"
     else:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
     name=talk_speaker1[comm4[k]]
-    html1=open('comm4'+str(k)+'.html',"a")
+    html1=open('../speaker_pages/comm4'+str(k)+'.html',"w")
     html1.write(c1)
     html1.close()
     
 for k in range(5):
     speaker=re.sub('"','',talk_speaker[comm5[k]])
     if talk_speaker1[comm5[k]] in user_comm:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm5[k]]])+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td><tr><td>"+"User community"+str(user_comm[talk_speaker1[comm5[k]]])+"</tr></td></table>"
     else:
-        c1="<div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
+        c1="<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><table><tr><td>"+speaker+"</tr></td></table>"
     name=talk_speaker1[comm5[k]]
-    html1=open('comm5'+str(k)+'.html',"a")
+    html1=open('../speaker_pages/comm5'+str(k)+'.html',"w")
     html1.write(c1)
     html1.close()

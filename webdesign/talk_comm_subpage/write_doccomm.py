@@ -62,10 +62,11 @@ for key in user_comm:
         key= re.sub(r'\<[^)]*\>', '', key) # gets rid of <=_content_=>
         comm5.append(key)
         
-c1="<div class='topic'><div>Full List of Talks: Community 1</div><table>"
+c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 1</div><table>"""
 for k1 in range(len(comm1)):
     html1=open('../speaker_pages/comm1'+str(k1)+'.html',"w")
-    html1.write(talk_speaker_full[commOrig1[k1]])
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
+    html1.write(string+talk_speaker_full[commOrig1[k1]])
     html1.close()
     name=talk_speaker[commOrig1[k1]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
@@ -79,10 +80,11 @@ html1.write(c1)
 html1.close()
 
 
-c2="<div class='topic'><div>Full List of Talks: Community 2</div><table>"
+c2="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 2</div><table>"""
 for k2 in range(len(comm2)):
     html2=open('../speaker_pages/comm2'+str(k2)+'.html',"w")
-    html2.write(talk_speaker_full[commOrig2[k2]])
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
+    html2.write(string+talk_speaker_full[commOrig2[k2]])
     html2.close()
     name=talk_speaker[commOrig2[k2]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
@@ -96,10 +98,10 @@ html2.write(c2)
 html2.close()
 
 
-c3="<div class='topic'><div>Full List of Talks: Community 3</div><table>"
+c3="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 3</div><table>"""
 for k3 in range(len(comm3)):
     html1=open('../speaker_pages/comm3'+str(k3)+'.html',"w")
-    html1.write(talk_speaker_full[commOrig3[k3]])
+    html1.write(string+talk_speaker_full[commOrig3[k3]])
     html1.close()
     name=talk_speaker[commOrig3[k3]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
@@ -112,10 +114,10 @@ html3=open("ncomm3.html","w")
 html3.write(c3)
 html3.close()
 
-c4="<div class='topic'><div>Full List of Talks: Community 4</div><table>"
+c4="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 4</div><table>"""
 for k4 in range(len(comm4)):
     html1=open('../speaker_pages/comm4'+str(k4)+'.html',"w")
-    html1.write(talk_speaker_full[commOrig4[k4]])
+    html1.write(string+talk_speaker_full[commOrig4[k4]])
     html1.close()
     name=talk_speaker[commOrig4[k4]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
@@ -128,10 +130,10 @@ html4=open("ncomm4.html","w")
 html4.write(c4)
 html4.close()
 
-c5="<div class='topic'><div>Full List of Talks: Community 5</div><table>"
+c5="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 5</div><table>"""
 for k5 in range(len(comm5)):
     html1=open('../speaker_pages/comm5'+str(k5)+'.html',"w")
-    html1.write(talk_speaker_full[commOrig5[k5]])
+    html1.write(string+talk_speaker_full[commOrig5[k5]])
     html1.close()
     name=talk_speaker[commOrig5[k5]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
