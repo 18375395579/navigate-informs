@@ -9,6 +9,9 @@ user_comm=pickle.load(open('doc_comm_cut5.pickle','rb'))
 talk_speaker_full=pickle.load(open('talk_speakerfull.pickle','rb'))
 talk_speaker=pickle.load(open('talk_speaker1.pickle','rb'))
 
+talk_details=pickle.load(open('/Users/john/Desktop/talk_details.pickle','rb'))
+
+
 comm1=[] # different communities
 comm2=[]
 comm3=[]
@@ -64,9 +67,11 @@ for key in user_comm:
         
 c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 1</div><table>"""
 for k1 in range(len(comm1)):
+    content= ""
+    content= ''.join(talk_details[commOrig1[k1]])
     html1=open('../speaker_pages/comm1'+str(k1)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
-    html1.write(string+talk_speaker_full[commOrig1[k1]])
+    html1.write(content)
     html1.close()
     name=talk_speaker[commOrig1[k1]]
     name= ''.join(glue + x if x.isupper() else x for x in name)
