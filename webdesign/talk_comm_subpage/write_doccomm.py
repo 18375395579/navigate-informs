@@ -7,7 +7,7 @@ glue=' '
 user_comm=pickle.load(open('doc_comm_cut5.pickle','rb'))
 #talk_speaker= pickle.load(open('/Users/john/Downloads/webdesign/talk_comm_subpage/talk_speaker1.pickle', 'rb'))
 talk_speaker_full=pickle.load(open('talk_speakerfull.pickle','rb'))
-talk_speaker=pickle.load(open('talk_speaker1.pickle','rb'))
+talk_speaker=pickle.load(open('talk_speaker_fixname.pickle','rb'))
 
 talk_details=pickle.load(open('/Users/john/Desktop/talk_details.pickle','rb'))
 
