@@ -3,7 +3,8 @@ import re
 
 glue=' '
 user_comm=pickle.load(open('user_comm_cutspeaker5.pickle','rb'))
-#speaker_full=pickle.load(open('speaker_fullname.pickle','rb'))
+speaker_full=pickle.load(open('speaker_fullname_fixname.pickle','rb'))
+#print speaker_full.keys()[0]
 
 comm1=[]
 comm2=[]
@@ -13,19 +14,25 @@ comm5=[]
 for key in user_comm:
     if user_comm[key]==0:
         #print key
+        key=speaker_full[key]
+        print key
         comm1.append(''.join(glue + x if x.isupper() else x for x in key))
         
     elif user_comm[key]==1:
-
+        key=speaker_full[key]
+        print key
         comm2.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==2:
-
+        key=speaker_full[key]
+        print key
         comm3.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==3:
-
+        key=speaker_full[key]
+        print key
         comm4.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==4:
-
+        key=speaker_full[key]
+        print key
         comm5.append(''.join(glue + x if x.isupper() else x for x in key))
         
         
