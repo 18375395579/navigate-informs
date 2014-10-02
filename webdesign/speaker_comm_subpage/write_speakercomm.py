@@ -4,8 +4,9 @@ import re
 glue=' '
 user_comm=pickle.load(open('user_comm_cutspeaker5.pickle','rb'))
 speaker_full=pickle.load(open('speaker_fullname_fixname.pickle','rb'))
-#print speaker_full.keys()[0]
-
+speaker_fixname=pickle.load(open('speaker_fixname.pickle','rb'))
+#print speaker_fixname.keys()[0]
+print user_comm.keys()[10]
 comm1=[]
 comm2=[]
 comm3=[]
@@ -13,31 +14,29 @@ comm4=[]
 comm5=[]
 for key in user_comm:
     if user_comm[key]==0:
-        #print key
-        key=speaker_full[key]
-        print key
+        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
         comm1.append(''.join(glue + x if x.isupper() else x for x in key))
         
     elif user_comm[key]==1:
-        key=speaker_full[key]
-        print key
+        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        #print key
         comm2.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==2:
-        key=speaker_full[key]
-        print key
+        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        #print key
         comm3.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==3:
-        key=speaker_full[key]
-        print key
+        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        #print key
         comm4.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==4:
-        key=speaker_full[key]
-        print key
+        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        #print key
         comm5.append(''.join(glue + x if x.isupper() else x for x in key))
         
         
 
-c1="<div class='topic'><div>Full List of Speaker Community 1</div><table>"
+c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 1</div><table>"""
 for k1 in range(len(comm1)-1):
     c1=c1+"<tr><td>"+comm1[k1]+"</td></tr>"
 
@@ -49,7 +48,7 @@ html1.close()
 
 
 
-c2="<div class='topic'><div>Full List of Speaker Community 2</div><table>"
+c2="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 2</div><table>"""
 for k2 in range(len(comm2)-1):
     c2=c2+"<tr><td>"+comm2[k2]+"</td></tr>"
 
@@ -60,7 +59,7 @@ html2.write(c2)
 html2.close()
 
 
-c3="<div class='topic'><div>Full List of Speaker Community 3</div><table>"
+c3="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 3</div><table>"""
 for k3 in range(len(comm3)-1):
     c3=c3+"<tr><td>"+comm3[k3]+"</td></tr>"
 
@@ -70,7 +69,7 @@ html3=open("scomm3.html","w")
 html3.write(c3)
 html3.close()
 
-c4="<div class='topic'><div>Full List of Speaker Community 4</div><table>"
+c4="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 4</div><table>"""
 for k4 in range(len(comm4)-1):
     c4=c4+"<tr><td>"+comm4[k4]+"</td></tr>"
 
@@ -80,7 +79,7 @@ html4=open("scomm4.html","w")
 html4.write(c4)
 html4.close()
 
-c5="<div class='topic'><div>Full List of Speaker Community 5</div><table>"
+c5="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 5</div><table>"""
 for k5 in range(len(comm5)-1):
     c5=c5+"<tr><td>"+comm5[k5]+"</td></tr>"
 
