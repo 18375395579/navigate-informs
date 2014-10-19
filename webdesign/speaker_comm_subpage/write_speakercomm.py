@@ -2,11 +2,11 @@ import cPickle as pickle
 import re
 
 glue=' '
-user_comm=pickle.load(open('user_comm_cutspeaker5.pickle','rb'))
+user_comm=pickle.load(open('user_comm_comp.pickle','rb'))
 speaker_full=pickle.load(open('speaker_fullname_fixname.pickle','rb'))
 speaker_fixname=pickle.load(open('speaker_fixname.pickle','rb'))
 #print speaker_fixname.keys()[0]
-print user_comm.keys()[10]
+print user_comm.keys()[100]
 comm1=[]
 comm2=[]
 comm3=[]
@@ -14,23 +14,23 @@ comm4=[]
 comm5=[]
 for key in user_comm:
     if user_comm[key]==0:
-        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
-        comm1.append(''.join(glue + x if x.isupper() else x for x in key))
+        key=re.sub('[^a-zA-Z0-9]', '', key)
+        comm1.append(''.join(glue + x if x.isupper() else x for x in key))#''.join(glue + x if x.isupper() else x for x in key)
         
     elif user_comm[key]==1:
-        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        key=re.sub('[^a-zA-Z0-9]', '', key)
         #print key
         comm2.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==2:
-        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        key=re.sub('[^a-zA-Z0-9]', '', key) #speaker_fixname[key]
         #print key
         comm3.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==3:
-        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        key=re.sub('[^a-zA-Z0-9]', '', key)
         #print key
         comm4.append(''.join(glue + x if x.isupper() else x for x in key))
     elif user_comm[key]==4:
-        key=re.sub('[^a-zA-Z0-9]', '', speaker_fixname[key])
+        key=re.sub('[^a-zA-Z0-9]', '', key)
         #print key
         comm5.append(''.join(glue + x if x.isupper() else x for x in key))
         

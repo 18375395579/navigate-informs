@@ -110,13 +110,13 @@ style="""<!DOCTYPE HTML>
     <h1>INFORMS Annual Meeting Abstract Clustering Result</h1>
     <h3>We took five-year's INFORMS Annual Meeting Abstract and applied the <a href="http://www.w3schools.com">Community-Content Custering model</a> on it. There are five speaker communities and five talk clusters. This page shows the a wordmap and 5 representative talks of each talk cluster. At the end, there is a bipartite graph showing the interrelationship between speaker communities and talk clusters.</h3>"""
 c1="""<div class='topic'>
-    <img src="webdesign/wordmap/doc_clus1.jpg" style="width:580px;height:360px;float:right">
+    <img src="webdesign/wordmap/doc_clus1.jpg" style="width:580px;height:360px;float:left">
     <div><A HREF="webdesign/talk_comm_subpage/ncomm1.html">Cluster 1</A></div>
     <table style="width:600px;float:left">"""
 for k in range(5):
-    print commOrig1[k]
     content= ""
-    content= ''.join(talk_details[commOrig1[k]])
+    for i in talk_details[commOrig1[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm1'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
@@ -128,12 +128,13 @@ c1=c1+"""</table>
 
 
 c2="""<div class='topic'>
-    <img src="webdesign/wordmap/doc_clus2.jpg" style="width:580px;height:360px;float:right">
+    <img src="webdesign/wordmap/doc_clus2.jpg" style="width:580px;height:360px;float:left">
     <div><A HREF="webdesign/talk_comm_subpage/ncomm2.html">Cluster 2</A></div>
     <table style="width:600px;float:left">"""
 for k in range(5):
     content= ""
-    content= ''.join(talk_details[commOrig2[k]])
+    for i in talk_details[commOrig2[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm2'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
@@ -142,12 +143,13 @@ for k in range(5):
 c2=c2+"""</table><div class='clearing'></div></div>"""
 
 c3="""<div class='topic'>
-    <img src="webdesign/wordmap/doc_clus3.jpg" style="width:580px;height:360px;float:right">
+    <img src="webdesign/wordmap/doc_clus3.jpg" style="width:580px;height:360px;float:left">
     <div><A HREF="webdesign/talk_comm_subpage/ncomm3.html">Cluster 3</A></div>
     <table style="width:600px;float:left">"""
 for k in range(5):
     content= ""
-    content= ''.join(talk_details[commOrig3[k]])
+    for i in talk_details[commOrig3[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm3'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
@@ -156,12 +158,13 @@ for k in range(5):
 c3=c3+"""</table><div class='clearing'></div></div>"""
 
 c4="""<div class='topic'>
-    <img src="webdesign/wordmap/doc_clus4.jpg" style="width:580px;height:360px;float:right">
+    <img src="webdesign/wordmap/doc_clus4.jpg" style="width:580px;height:360px;float:left">
     <div><A HREF="webdesign/talk_comm_subpage/ncomm4.html">Cluster 4</A></div>
     <table style="width:600px;float:left">"""
 for k in range(5):
     content= ""
-    content= ''.join(talk_details[commOrig4[k]])
+    for i in talk_details[commOrig4[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm4'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
@@ -170,12 +173,13 @@ for k in range(5):
 c4=c4+"""</table><div class='clearing'></div></div>"""
 
 c5="""<div class='topic'>
-    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:right">
+    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
     <div><A HREF="webdesign/talk_comm_subpage/ncomm5.html">Cluster 5</A></div>
     <table style="width:600px;float:left">"""
 for k in range(5):
     content= ""
-    content= ''.join(talk_details[commOrig5[k]])
+    for i in talk_details[commOrig5[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm5'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
@@ -183,7 +187,24 @@ for k in range(5):
     c5=c5+"""<tr><td><a href="/webdesign/speaker_pages_main/comm5"""+str(k)+""".html" onclick="javascript:void window.open("'webdesign/speaker_pages_main/comm5"""+str(k)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""+comm5[k].strip()+", "+speaker_fixname[talk_speaker[commOrig5[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
 c5=c5+"""</table><div class='clearing'></div></div>"""
 
-
+bottom="""
+    <body>
+    <img src="webdesign/graph.jpg" width="650" height="400" alt="Planets" usemap="#planetmap">
+    <map name="planetmap">
+    <area shape="rect" coords="0,0,100,80" href="webdesign/speaker_comm_subpage/scomm1.html" alt="Comm0">
+    <area shape="rect" coords="0,80,100,160" href="webdesign/speaker_comm_subpage/scomm2.html" alt="Comm1">
+    <area shape="rect" coords="0,160,100,240" href="webdesign/speaker_comm_subpage/scomm3.html" alt="Comm2">
+    <area shape="rect" coords="0,240,100,320" href="webdesign/speaker_comm_subpage/scomm4.html" alt="Comm3">
+    <area shape="rect" coords="0,320,100,400" href="webdesign/speaker_comm_subpage/scomm5.html" alt="Comm4">
+    <area shape="rect" coords="440,0,650,80" href="webdesign/talk_comm_subpage/ncomm1.html" alt="Comm0">
+    <area shape="rect" coords="440,80,650,160" href="webdesign/talk_comm_subpage/ncomm2.html" alt="Comm1">
+    <area shape="rect" coords="440,160,650,240" href="webdesign/talk_comm_subpage/ncomm3.html" alt="Comm2">
+    <area shape="rect" coords="440,240,650,320" href="webdesign/talk_comm_subpage/ncomm4.html" alt="Comm3">
+    <area shape="rect" coords="440,320,650,400" href="webdesign/talk_comm_subpage/ncomm5.html" alt="Comm4">
+    </map>
+    </body>
+    </html>
+    """
 html=open("yujia9.html","w")
-html.write(style+c1+c2+c3+c4+c5)
+html.write(style+c1+c2+c3+c4+c5+bottom)
 html.close()
