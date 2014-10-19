@@ -63,7 +63,8 @@ for key in user_comm:
         key= re.sub(r'\*[^)]*\*', '', key) # gets rid of ***_content_***
         key= re.sub(r'\<[^)]*\>', '', key) # gets rid of <=_content_=>
         comm5.append(key)
-        
+string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
+
 c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 1</div><table>"""
 for k1 in range(len(comm1)):
     content= ""
@@ -81,7 +82,7 @@ for k1 in range(len(comm1)):
 c1=c1+"</table><div class='clearing'></div></div></html>"
 
 html1=open("ncomm1.html","w")
-html1.write(c1)
+html1.write(string+c1)
 html1.close()
 
 
@@ -102,7 +103,7 @@ for k2 in range(len(comm2)):
 c2=c2+"</table><div class='clearing'></div></div></html>"
 
 html2=open("ncomm2.html","w")
-html2.write(c2)
+html2.write(string+c2)
 html2.close()
 
 
@@ -122,7 +123,7 @@ for k3 in range(len(comm3)):
 c3=c3+"</table><div class='clearing'></div></div></html>"
 
 html3=open("ncomm3.html","w")
-html3.write(c3)
+html3.write(string+c3)
 html3.close()
 
 c4="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 4</div><table>"""
@@ -141,7 +142,7 @@ for k4 in range(len(comm4)):
 c4=c4+"</table><div class='clearing'></div></div></html>"
 
 html4=open("ncomm4.html","w")
-html4.write(c4)
+html4.write(string+c4)
 html4.close()
 
 c5="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Talks: Community 5</div><table>"""
@@ -160,7 +161,7 @@ for k5 in range(len(comm5)):
 c5=c5+"</table><div class='clearing'></div></div></html>"
 
 html5=open("ncomm5.html","w")
-html5.write(c5)
+html5.write(string+c5)
 html5.close()
 
 
