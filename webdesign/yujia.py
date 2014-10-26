@@ -14,7 +14,6 @@ speaker_fixname=pickle.load(open('speaker_fixname.pickle','rb'))
 talk_year=pickle.load(open('talk_year.pickle','rb'))
 talk_details=pickle.load(open('talk_details.pickle','rb'))
 # the talks and the speakers
-print talk_details.keys()[0]
 
 num_Comms= 5 # the number of communities that we have.     
 
@@ -102,18 +101,24 @@ style="""<!DOCTYPE HTML>
     .clearing {
     clear: both;
     }
+    th, td {
+    padding: 5px;
+    }
+    a.black:link {color:#000000; text-decoration: none;}
+    a.black:visited {color:#000000; text-decoration: none;}
+    a.black:hover {color:#0000ff; text-decoration: none;}
     </style>
-    
     </head>
-    
     <body>
-    <h1>INFORMS Annual Meeting Abstract Clustering Result</h1>
-    <h3>We took five-year's INFORMS Annual Meeting Abstract and applied the <a href="http://www.w3schools.com">Community-Content Custering model</a> on it. There are five speaker communities and five talk clusters. This page shows the a wordmap and 5 representative talks of each talk cluster. At the end, there is a bipartite graph showing the interrelationship between speaker communities and talk clusters.</h3>"""
+    <h1>INFORMS Annual Meeting Abstract Clustering</h1>
+    <h3>We took abstracts from five-years of the INFORMS Annual Meeting and used <a href="ContentAugmentedStochasticBlockModels.pdf">Content-Augmented Stochastic Blockmodels</a> to group speakers into communities and talks into clusters.  This page shows a word cloud and representative talks from each cluster. </h3>"""
 c1="""<div class='topic'>
     <img src="webdesign/wordmap/doc_clus1.jpg" style="width:580px;height:360px;float:left">
-    <div><A HREF="webdesign/talk_comm_subpage/ncomm1.html">Cluster 1</A></div>
-    <table style="width:600px;float:left">"""
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage/ncomm1.html">Cluster 1</A></strong></div></tr></td>
+    """
 for k in range(5):
+    print comm1[k]
     content= ""
     for i in talk_details[commOrig1[k]]:
         content= content+"<br>"+''.join(i)+"</br>"
@@ -121,7 +126,7 @@ for k in range(5):
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
     html1.close()
-    c1=c1+"""<tr><td><a href="webdesign/speaker_pages_main/comm1"""+str(k)+""".html" onclick="javascript:void window.open("'webdesign/speaker_pages_main/comm1"""+str(k)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""+comm1[k].strip()+", "+speaker_fixname[talk_speaker[commOrig1[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
+    c1=c1+"""<tr><td><a href="webdesign/speaker_pages_main/comm1"""+str(k)+""".html" class="black">"""+comm1[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig1[k]]]+", "+talk_year[commOrig1[k]]+"""</i></td></tr>"""
 
 c1=c1+"""</table>
 <div class='clearing'></div></div>"""
@@ -129,8 +134,9 @@ c1=c1+"""</table>
 
 c2="""<div class='topic'>
     <img src="webdesign/wordmap/doc_clus2.jpg" style="width:580px;height:360px;float:left">
-    <div><A HREF="webdesign/talk_comm_subpage/ncomm2.html">Cluster 2</A></div>
-    <table style="width:600px;float:left">"""
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage/ncomm2.html">Cluster 2</A></strong></div></tr></td>
+    """
 for k in range(5):
     content= ""
     for i in talk_details[commOrig2[k]]:
@@ -139,13 +145,14 @@ for k in range(5):
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
     html1.close()
-    c2=c2+"""<tr><td><a href="webdesign/speaker_pages_main/comm2"""+str(k)+""".html" onclick="javascript:void window.open("'webdesign/speaker_pages_main/comm2"""+str(k)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""+comm2[k].strip()+", "+speaker_fixname[talk_speaker[commOrig2[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
+    c2=c2+"""<tr><td><a href="webdesign/speaker_pages_main/comm2"""+str(k)+""".html" class="black">"""+comm2[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig2[k]]]+", "+talk_year[commOrig1[k]]+"""</i></td></tr>"""
 c2=c2+"""</table><div class='clearing'></div></div>"""
 
 c3="""<div class='topic'>
     <img src="webdesign/wordmap/doc_clus3.jpg" style="width:580px;height:360px;float:left">
-    <div><A HREF="webdesign/talk_comm_subpage/ncomm3.html">Cluster 3</A></div>
-    <table style="width:600px;float:left">"""
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage/ncomm3.html">Cluster 3</A></strong></div></tr></td>
+    """
 for k in range(5):
     content= ""
     for i in talk_details[commOrig3[k]]:
@@ -154,13 +161,14 @@ for k in range(5):
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
     html1.close()
-    c3=c3+"""<tr><td><a href="webdesign/speaker_pages_main/comm3"""+str(k)+""".html" onclick="javascript:void window.open("'webdesign/speaker_pages_main/comm3"""+str(k)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""+comm3[k].strip()+", "+speaker_fixname[talk_speaker[commOrig3[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
+    c3=c3+"""<tr><td><a href="webdesign/speaker_pages_main/comm3"""+str(k)+""".html" class="black">"""+comm3[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig3[k]]]+", "+talk_year[commOrig1[k]]+"""</i></td></tr>"""
 c3=c3+"""</table><div class='clearing'></div></div>"""
 
 c4="""<div class='topic'>
     <img src="webdesign/wordmap/doc_clus4.jpg" style="width:580px;height:360px;float:left">
-    <div><A HREF="webdesign/talk_comm_subpage/ncomm4.html">Cluster 4</A></div>
-    <table style="width:600px;float:left">"""
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage/ncomm4.html">Cluster 4</A></strong></div></td></tr>
+    """
 for k in range(5):
     content= ""
     for i in talk_details[commOrig4[k]]:
@@ -169,13 +177,14 @@ for k in range(5):
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
     html1.close()
-    c4=c4+"""<tr><td><a href="webdesign/speaker_pages_main/comm4"""+str(k)+""".html" onclick="javascript:void window.open("'webdesign/speaker_pages_main/comm4"""+str(k)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""+comm4[k].strip()+", "+speaker_fixname[talk_speaker[commOrig4[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
+    c4=c4+"""<tr><td><a href="webdesign/speaker_pages_main/comm4"""+str(k)+""".html" class="black">"""+comm4[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig4[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
 c4=c4+"""</table><div class='clearing'></div></div>"""
 
 c5="""<div class='topic'>
     <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
-    <div><A HREF="webdesign/talk_comm_subpage/ncomm5.html">Cluster 5</A></div>
-    <table style="width:600px;float:left">"""
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage/ncomm5.html">Cluster 5</A></strong></div></td></tr>
+    """
 for k in range(5):
     content= ""
     for i in talk_details[commOrig5[k]]:
@@ -184,10 +193,15 @@ for k in range(5):
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
     html1.write(content)
     html1.close()
-    c5=c5+"""<tr><td><a href="/webdesign/speaker_pages_main/comm5"""+str(k)+""".html" onclick="javascript:void window.open("'webdesign/speaker_pages_main/comm5"""+str(k)+""".html'",'1408393674039','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">"""+comm5[k].strip()+", "+speaker_fixname[talk_speaker[commOrig5[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
+    c5=c5+"""<tr><td><a href="/webdesign/speaker_pages_main/comm5"""+str(k)+""".html" class="black">"""+comm5[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig5[k]]]+", "+talk_year[commOrig1[k]]+"""</td></tr>"""
 c5=c5+"""</table><div class='clearing'></div></div>"""
 
 bottom="""
+    <h3>This bipartite graph shows the interrelationship between speaker communities and talk clusters.
+    The thickness of each bar shows how likely a speaker from each community is to be interested in a talk from that cluster.
+    Click on a blue box to see speakers in that community.
+    Click on a red box to see talks in that cluster.</h3>
+
     <body>
     <img src="webdesign/graph.jpg" width="650" height="400" alt="Planets" usemap="#planetmap">
     <map name="planetmap">
