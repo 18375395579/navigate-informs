@@ -1,0 +1,56 @@
+<p>
+<div id="myDiv1">Clus1: 0.01727   Clus2: 0.00035   Clus3: 0.00630   Clus4: 0.00121   Clus5: 0.00367</div>
+<div id="myDiv2">Clus1: 0.00068 Clus2: 0.01012 Clus3: 0.00255 Clus4: 0.00145 Clus5: 0.00155</div>
+<div id="myDiv3">Clus1: 0.00209 Clus2: 0.00238 Clus3: 0.00701 Clus4: 0.00169 Clus5: 0.00151</div>
+<div id="myDiv4">Clus1: 0.00114 Clus2: 0.00204 Clus3: 0.00406 Clus4: 0.01390 Clus5: 0.00160</div>
+<div id="myDiv5">Clus1: 0.00094 Clus2: 0.00222 Clus3: 0.00158 Clus4: 0.00159 Clus5: 0.00912</div>
+</p>
+<div id="imagemap">
+    <img src="webdesign/newgraph.png" width="400" height="500" usemap="#Map" border="0" />
+    <map name="Map">
+        <area shape="circle" coords="55,53,45" href="webdesign/speaker_comm_subpage/scomm1.html" alt="Comm0" id="comm1" name="Comm1" />
+        <area shape="circle" coords="55,150,45" href="webdesign/speaker_comm_subpage/scomm2.html" alt="Comm1" id="comm2" name="Comm2" />
+        <area shape="circle" coords="55,250,45" href="webdesign/speaker_comm_subpage/scomm3.html" alt="Comm2" id="comm3" name="Comm3" />
+        <area shape="circle" coords="55,350,45" href="webdesign/speaker_comm_subpage/scomm4.html" alt="Comm3" id="comm4" name="Comm4" />
+        <area shape="circle" coords="55,450,45" href="webdesign/speaker_comm_subpage/scomm5.html" alt="Comm4" id="comm5" name="Comm5" />
+        <area shape="circle" coords="340,53,45" href="webdesign/talk_comm_subpage/ncomm1.html" alt="Clus0">
+            <area shape="circle" coords="340,150,45" href="webdesign/talk_comm_subpage/ncomm2.html" alt="Clus1">
+                <area shape="circle" coords="340,250,45" href="webdesign/talk_comm_subpage/ncomm3.html" alt="Clus2">
+                    <area shape="circle" coords="340,350,45" href="webdesign/talk_comm_subpage/ncomm4.html" alt="Clus3">
+                        <area shape="circle" coords="340,450,45" href="webdesign/talk_comm_subpage/ncomm5.html" alt="Clus4">
+                            </map>
+    
+</div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    function hovIn() {
+        var areaID = $(this).attr('id');
+        //alert('['+areaID+']');
+        if (areaID == 'comm1') {
+            $('#myDiv1').show();
+        }
+        else if (areaID == 'comm2') {
+            $('#myDiv2').show();
+        }
+        else if (areaID == 'comm3') {
+            $('#myDiv3').show();
+        }
+        else if (areaID == 'comm4') {
+            $('#myDiv4').show();
+        }
+        else if (areaID == 'comm5') {
+            $('#myDiv5').show();
+        }
+    }
+
+function hovOut() {
+    $('#myDiv1').hide();
+    $('#myDiv2').hide();
+    $('#myDiv3').hide();
+    $('#myDiv4').hide();
+    $('#myDiv5').hide();
+}
+
+$('map area').hover(hovIn, hovOut);
+    </script>
