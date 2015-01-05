@@ -138,7 +138,7 @@ for k in range(5):
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm1'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
-    html1.write(content)
+    html1.write(string+content)
     html1.close()
     c1=c1+"""<tr><td><a href="webdesign/speaker_pages_main/comm1"""+str(k)+""".html" class="black">"""+comm1[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig1[k]]]+", "+talk_year[commOrig1[k]]+"""</i></td></tr>"""
 
@@ -157,7 +157,7 @@ for k in range(5):
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm2'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
-    html1.write(content)
+    html1.write(string+content)
     html1.close()
     c2=c2+"""<tr><td><a href="webdesign/speaker_pages_main/comm2"""+str(k)+""".html" class="black">"""+comm2[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig2[k]]]+", "+talk_year[commOrig2[k]]+"""</i></td></tr>"""
 c2=c2+"""</table><div class='clearing'></div></div>"""
@@ -173,7 +173,7 @@ for k in range(5):
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm3'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
-    html1.write(content)
+    html1.write(string+content)
     html1.close()
     c3=c3+"""<tr><td><a href="webdesign/speaker_pages_main/comm3"""+str(k)+""".html" class="black">"""+comm3[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig3[k]]]+", "+talk_year[commOrig3[k]]+"""</i></td></tr>"""
 c3=c3+"""</table><div class='clearing'></div></div>"""
@@ -189,7 +189,7 @@ for k in range(5):
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm4'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
-    html1.write(content)
+    html1.write(string+content)
     html1.close()
     c4=c4+"""<tr><td><a href="webdesign/speaker_pages_main/comm4"""+str(k)+""".html" class="black">"""+comm4[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig4[k]]]+", "+talk_year[commOrig4[k]]+"""</td></tr>"""
 c4=c4+"""</table><div class='clearing'></div></div>"""
@@ -205,7 +205,7 @@ for k in range(5):
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('speaker_pages_main/comm5'+str(k)+'.html',"w")
     string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
-    html1.write(content)
+    html1.write(string+content)
     html1.close()
     c5=c5+"""<tr><td><a href="/webdesign/speaker_pages_main/comm5"""+str(k)+""".html" class="black">"""+comm5[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig5[k]]]+", "+talk_year[commOrig5[k]]+"""</td></tr>"""
 c5=c5+"""</table><div class='clearing'></div></div>"""
