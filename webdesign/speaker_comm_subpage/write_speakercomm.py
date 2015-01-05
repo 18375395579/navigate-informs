@@ -36,7 +36,9 @@ for key in user_comm:
         
         
 
-c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 1</div><table>"""
+c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <div class='topic'><div>Full List of Speaker Community 1</div><table>"""
 for k1 in range(len(comm1)-1):
     c1=c1+"<tr><td>"+comm1[k1]+"</td></tr>"
 
@@ -48,7 +50,9 @@ html1.close()
 
 
 
-c2="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 2</div><table>"""
+c2="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <div class='topic'><div>Full List of Speaker Community 2</div><table>"""
 for k2 in range(len(comm2)-1):
     c2=c2+"<tr><td>"+comm2[k2]+"</td></tr>"
 
@@ -59,7 +63,9 @@ html2.write(c2)
 html2.close()
 
 
-c3="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 3</div><table>"""
+c3="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <div class='topic'><div>Full List of Speaker Community 3</div><table>"""
 for k3 in range(len(comm3)-1):
     c3=c3+"<tr><td>"+comm3[k3]+"</td></tr>"
 
@@ -69,7 +75,9 @@ html3=open("scomm3.html","w")
 html3.write(c3)
 html3.close()
 
-c4="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 4</div><table>"""
+c4="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <div class='topic'><div>Full List of Speaker Community 4</div><table>"""
 for k4 in range(len(comm4)-1):
     c4=c4+"<tr><td>"+comm4[k4]+"</td></tr>"
 
@@ -79,7 +87,9 @@ html4=open("scomm4.html","w")
 html4.write(c4)
 html4.close()
 
-c5="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><div class='topic'><div>Full List of Speaker Community 5</div><table>"""
+c5="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+    <div class='topic'><div>Full List of Speaker Community 5</div><table>"""
 for k5 in range(len(comm5)-1):
     c5=c5+"<tr><td>"+comm5[k5]+"</td></tr>"
 
