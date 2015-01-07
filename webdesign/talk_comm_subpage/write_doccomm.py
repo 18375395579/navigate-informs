@@ -66,8 +66,8 @@ for key in user_comm:
 string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
 
 c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-    <div class='topic'><div>Full List of Talks: Community 1</div><table>"""
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div class='topic'><div>Full List of Talks: Community 1</div><table>"""
 for k1 in range(len(comm1)):
     content= ""
     for i in talk_details[commOrig1[k1]]:
@@ -89,8 +89,8 @@ html1.close()
 
 
 c2="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-    <div class='topic'><div>Full List of Talks: Community 2</div><table>"""
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div class='topic'><div>Full List of Talks: Community 2</div><table>"""
 for k2 in range(len(comm2)):
     content= ""
     for i in talk_details[commOrig2[k2]]:
@@ -112,8 +112,8 @@ html2.close()
 
 
 c3="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-    <div class='topic'><div>Full List of Talks: Community 3</div><table>"""
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div class='topic'><div>Full List of Talks: Community 3</div><table>"""
 for k3 in range(len(comm3)):
     content= ""
     for i in talk_details[commOrig3[k3]]:
@@ -133,8 +133,8 @@ html3.write(c3)
 html3.close()
 
 c4="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-    <div class='topic'><div>Full List of Talks: Community 4</div><table>"""
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div class='topic'><div>Full List of Talks: Community 4</div><table>"""
 for k4 in range(len(comm4)):
     content= ""
     for i in talk_details[commOrig4[k4]]:
@@ -154,8 +154,8 @@ html4.write(c4)
 html4.close()
 
 c5="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-    <div class='topic'><div>Full List of Talks: Community 5</div><table>"""
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div class='topic'><div>Full List of Talks: Community 5</div><table>"""
 for k5 in range(len(comm5)):
     content= ""
     for i in talk_details[commOrig5[k5]]:
