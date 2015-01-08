@@ -63,17 +63,23 @@ for key in user_comm:
         key= re.sub(r'\*[^)]*\*', '', key) # gets rid of ***_content_***
         key= re.sub(r'\<[^)]*\>', '', key) # gets rid of <=_content_=>
         comm5.append(key)
-string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
+string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+"""
 
 c1="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-<div class='topic'><div>Full List of Talks: Community 1</div><table>"""
+<div class='topic'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div>Full List of Talks: Community 1</div><table>"""
 for k1 in range(len(comm1)):
     content= ""
     for i in talk_details[commOrig1[k1]]:
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('../speaker_pages/comm1'+str(k1)+'.html',"w")
-    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+"""
     html1.write(string+content)
     html1.close()
     name=talk_speaker[commOrig1[k1]]
@@ -90,13 +96,17 @@ html1.close()
 
 c2="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-<div class='topic'><div>Full List of Talks: Community 2</div><table>"""
+<div class='topic'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div>Full List of Talks: Community 2</div><table>"""
 for k2 in range(len(comm2)):
     content= ""
     for i in talk_details[commOrig2[k2]]:
         content= content+"<br>"+''.join(i)+"</br>"
     html2=open('../speaker_pages/comm2'+str(k2)+'.html',"w")
-    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+"""
     html2.write(string+content)
     html2.close()
     name=talk_speaker[commOrig2[k2]]
@@ -113,12 +123,17 @@ html2.close()
 
 c3="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-<div class='topic'><div>Full List of Talks: Community 3</div><table>"""
+<div class='topic'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div>Full List of Talks: Community 3</div><table>"""
 for k3 in range(len(comm3)):
     content= ""
     for i in talk_details[commOrig3[k3]]:
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('../speaker_pages/comm3'+str(k3)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+"""
     html1.write(string+content)
     html1.close()
     name=talk_speaker[commOrig3[k3]]
@@ -134,12 +149,17 @@ html3.close()
 
 c4="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-<div class='topic'><div>Full List of Talks: Community 4</div><table>"""
+<div class='topic'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div>Full List of Talks: Community 4</div><table>"""
 for k4 in range(len(comm4)):
     content= ""
     for i in talk_details[commOrig4[k4]]:
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('../speaker_pages/comm4'+str(k4)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+"""
     html1.write(string+content)
     html1.close()
     name=talk_speaker[commOrig4[k4]]
@@ -155,12 +175,17 @@ html4.close()
 
 c5="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
-<div class='topic'><div>Full List of Talks: Community 5</div><table>"""
+<div class='topic'>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<div>Full List of Talks: Community 5</div><table>"""
 for k5 in range(len(comm5)):
     content= ""
     for i in talk_details[commOrig5[k5]]:
         content= content+"<br>"+''.join(i)+"</br>"
     html1=open('../speaker_pages/comm5'+str(k5)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+"""
     html1.write(string+content)
     html1.close()
     name=talk_speaker[commOrig5[k5]]
