@@ -119,6 +119,7 @@ for key in user_comm:
         key= re.sub(r'\<[^)]*\>', '', key) # gets rid of <=_content_=>
         comm9.append(key)
 
+print len(comm1)
 
 #for i in range(num_Comms):
 #for key in doc_comm:
@@ -133,9 +134,9 @@ for key in user_comm:
 
 style="""<!DOCTYPE HTML>
     <html>
-    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" /><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
     <style>
 	body {
     background-color: #dddddd;
@@ -161,24 +162,205 @@ style="""<!DOCTYPE HTML>
     <h1>INFORMS Annual Meeting Abstract Clustering</h1>
     <h3>We took abstracts from five-years of the INFORMS Annual Meeting and used <a href="ContentAugmentedStochasticBlockModels.pdf">Content-Augmented Stochastic Blockmodels</a> to group speakers into communities and talks into clusters.  This page shows a word cloud and representative talks from each cluster. </h3>"""
 
-body=""
-for i in range(10):
-    c1="""<div class='topic'>
-        <img src="webdesign/wordmap/doc_clus1.jpg" style="width:580px;height:360px;float:left">
-        <table style="width:600px;float:left">
-        <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage/ncomm1.html">Cluster """+str(i)+"""</A></strong></div></tr></td>
-        """
-    x1="commOrig"+str(i)
-    x2="comm"+str(i)
-    for k in range(5):
-        content= ""
-        for i in talk_details[x1[k]]:
-            content = content+"<br>"+''.join(i)+"</br>"
-        html1=open('speaker_pages_main_10/comm'+str(i)+str(k)+'.html',"w")
-        string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />"""
-        html1.write(content)
-        html1.close()
-        c1=c1+"""<tr><td><a href="webdesign/speaker_pages_main_10/comm"""+str(i)+str(k)+""".html" class="black">"""+x2[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[x1[k]]]+", "+talk_year[x1[k]]+"""</i></td></tr>"""
 
-        c1=c1+"""</table><div class='clearing'></div></div>"""
-    body=body+c1
+
+c1="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus1.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm1.html">Cluster 1</A></strong></div></tr></td>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig0[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm0'+str(k)+'.html',"w")
+    string="""    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >"""
+    html1.write(string+content)
+    html1.close()
+    c1=c1+"""<tr><td><a href="webdesign/speaker_pages_main10/comm0"""+str(k)+""".html" class="black">"""+comm0[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig0[k]]]+", "+talk_year[commOrig0[k]]+"""</i></td></tr>"""
+
+c1=c1+"""</table>
+    <div class='clearing'></div></div>"""
+
+
+c2="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus2.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm2.html">Cluster 2</A></strong></div></tr></td>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig1[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm1'+str(k)+'.html',"w")
+    string="""    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >"""
+    html1.write(string+content)
+    html1.close()
+    c2=c2+"""<tr><td><a href="webdesign/speaker_pages_main10/comm1"""+str(k)+""".html" class="black">"""+comm1[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig1[k]]]+", "+talk_year[commOrig1[k]]+"""</i></td></tr>"""
+c2=c2+"""</table><div class='clearing'></div></div>"""
+
+c3="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus3.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm3.html">Cluster 3</A></strong></div></tr></td>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig2[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm2'+str(k)+'.html',"w")
+    string="""    <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >"""
+    html1.write(string+content)
+    html1.close()
+    c3=c3+"""<tr><td><a href="webdesign/speaker_pages_main10/comm2"""+str(k)+""".html" class="black">"""+comm2[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig2[k]]]+", "+talk_year[commOrig2[k]]+"""</i></td></tr>"""
+c3=c3+"""</table><div class='clearing'></div></div>"""
+
+c4="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus4.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm4.html">Cluster 4</A></strong></div></td></tr>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig3[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm3'+str(k)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
+    html1.write(string+content)
+    html1.close()
+    c4=c4+"""<tr><td><a href="webdesign/speaker_pages_main10/comm3"""+str(k)+""".html" class="black">"""+comm3[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig3[k]]]+", "+talk_year[commOrig3[k]]+"""</td></tr>"""
+c4=c4+"""</table><div class='clearing'></div></div>"""
+
+c5="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm5.html">Cluster 5</A></strong></div></td></tr>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig4[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm4'+str(k)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
+    html1.write(string+content)
+    html1.close()
+    c5=c5+"""<tr><td><a href="webdesign/speaker_pages_main10/comm4"""+str(k)+""".html" class="black">"""+comm4[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig4[k]]]+", "+talk_year[commOrig4[k]]+"""</td></tr>"""
+c5=c5+"""</table><div class='clearing'></div></div>"""
+
+c6="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm6.html">Cluster 6</A></strong></div></td></tr>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig5[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm5'+str(k)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
+    html1.write(string+content)
+    html1.close()
+    c6=c6+"""<tr><td><a href="webdesign/speaker_pages_main10/comm5"""+str(k)+""".html" class="black">"""+comm5[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig5[k]]]+", "+talk_year[commOrig5[k]]+"""</td></tr>"""
+c6=c6+"""</table><div class='clearing'></div></div>"""
+
+c7="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm7.html">Cluster 7</A></strong></div></td></tr>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig6[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm6'+str(k)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
+    html1.write(string+content)
+    html1.close()
+    c7=c7+"""<tr><td><a href="webdesign/speaker_pages_main10/comm6"""+str(k)+""".html" class="black">"""+comm6[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig6[k]]]+", "+talk_year[commOrig6[k]]+"""</td></tr>"""
+c7=c7+"""</table><div class='clearing'></div></div>"""
+
+c8="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm8.html">Cluster 8</A></strong></div></td></tr>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig7[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm7'+str(k)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
+    html1.write(string+content)
+    html1.close()
+    c8=c8+"""<tr><td><a href="webdesign/speaker_pages_main10/comm7"""+str(k)+""".html" class="black">"""+comm7[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig7[k]]]+", "+talk_year[commOrig7[k]]+"""</td></tr>"""
+c8=c8+"""</table><div class='clearing'></div></div>"""
+
+c9="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm9.html">Cluster 9</A></strong></div></td></tr>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig8[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm8'+str(k)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
+    html1.write(string+content)
+    html1.close()
+    c9=c9+"""<tr><td><a href="webdesign/speaker_pages_main10/comm8"""+str(k)+""".html" class="black">"""+comm8[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig8[k]]]+", "+talk_year[commOrig8[k]]+"""</td></tr>"""
+c9=c9+"""</table><div class='clearing'></div></div>"""
+
+c0="""<div class='topic'>
+    <img src="webdesign/wordmap/doc_clus5.jpg" style="width:580px;height:360px;float:left">
+    <table style="width:600px;float:left">
+    <tr><td><div><strong>Example Talks from <A HREF="webdesign/talk_comm_subpage10/ncomm0.html">Cluster 10</A></strong></div></td></tr>
+    """
+for k in range(5):
+    content= ""
+    for i in talk_details[commOrig9[k]]:
+        content= content+"<br>"+''.join(i)+"</br>"
+    html1=open('speaker_pages_main10/comm9'+str(k)+'.html',"w")
+    string="""<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />"""
+    html1.write(string+content)
+    html1.close()
+    c0=c0+"""<tr><td><a href="webdesign/speaker_pages_main10/comm9"""+str(k)+""".html" class="black">"""+comm9[k].strip()+" -- <i>"+speaker_fixname[talk_speaker[commOrig9[k]]]+", "+talk_year[commOrig9[k]]+"""</td></tr>"""
+c0=c0+"""</table><div class='clearing'></div></div>"""
+
+bottom="""
+    <h3>This bipartite graph shows the interrelationship between speaker communities and talk clusters.
+    The thickness of each bar shows how likely a speaker from each community is to be interested in a talk from that cluster.
+    Click on a blue box to see speakers in that community.
+    Click on a red box to see talks in that cluster.</h3>
+    
+    <body>
+    <div id="imagemap">
+    <img id="Map" src="webdesign/qxygraphs/qxy.png" width="400" height="500" usemap="#Map" border="0" />
+    <map id="Map" name="Map">
+    <area shape="circle" coords="55,53,45" href="webdesign/speaker_comm_subpage/scomm1.html" alt="Comm0" id="comm1" name="Comm1" onMouseOver="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/comm1.png';" onMouseOut="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/qxy.png';"/>
+    <area shape="circle" coords="55,150,45" href="webdesign/speaker_comm_subpage/scomm2.html" alt="Comm1" id="comm2" name="Comm2" onMouseOver="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/comm2.png';" onMouseOut="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/qxy.png';"/>
+    <area shape="circle" coords="55,250,45" href="webdesign/speaker_comm_subpage/scomm3.html" alt="Comm2" id="comm3" name="Comm3" onMouseOver="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/comm3.png';" onMouseOut="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/qxy.png';"/>
+    <area shape="circle" coords="55,350,45" href="webdesign/speaker_comm_subpage/scomm4.html" alt="Comm3" id="comm4" name="Comm4" onMouseOver="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/comm4.png';" onMouseOut="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/qxy.png';"/>
+    <area shape="circle" coords="55,450,45" href="webdesign/speaker_comm_subpage/scomm5.html" alt="Comm4" id="comm5" name="Comm5" onMouseOver="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/comm5.png';" onMouseOut="if(document.images) document.getElementById('Map').src= 'webdesign/qxygraphs/qxy.png';"/>
+    <area shape="circle" coords="340,53,45" href="webdesign/talk_comm_subpage/ncomm1.html" alt="Clus0">
+    <area shape="circle" coords="340,150,45" href="webdesign/talk_comm_subpage/ncomm2.html" alt="Clus1">
+    <area shape="circle" coords="340,250,45" href="webdesign/talk_comm_subpage/ncomm3.html" alt="Clus2">
+    <area shape="circle" coords="340,350,45" href="webdesign/talk_comm_subpage/ncomm4.html" alt="Clus3">
+    <area shape="circle" coords="340,450,45" href="webdesign/talk_comm_subpage/ncomm5.html" alt="Clus4">
+    </map>
+    </body>
+    </html>
+    """
+html=open("yujia11.html","w")
+html.write(style+c1+c2+c3+c4+c5+c6+c7+c8+c9+c0+bottom)
+html.close()
