@@ -7,7 +7,7 @@ import os
 #os.chdir('/Users/john/Desktop/navigate-informs/webdesign') # change the working directory to the folder that contains your files
 
 
-user_comm=pickle.load(open('doc_comm.pickle','rb')) # contains the names of the talks
+user_comm=pickle.load(open('doc_comm_cut5.pickle','rb')) # contains the names of the talks
 #user_comm=pickle.load(open('user_comm_cutspeaker5.pickle','rb')) # contains the names of the speakers
 talk_speaker=pickle.load(open('talk_speaker.pickle','rb')) # contains the names of
 speaker_fixname=pickle.load(open('speaker_fixname.pickle','rb'))
